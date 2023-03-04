@@ -1,6 +1,7 @@
 # %%
 import time
-
+import datetime
+# %%
 class Utime:
     def __init__(self):
         self.st = None
@@ -21,4 +22,11 @@ if __name__ == "__main__":
     print(ut.get_now_min())
     print(ut.get_now_hour())
 
+# %%
+def get_nowdt_str():
+    dt_now = datetime.datetime.now()
+    return dt_now
+def get_nowdt_forfile():
+    dt_now = get_nowdt_str()
+    return dt_now.strftime('%Y%m%d%H%M%S')
 # %%
