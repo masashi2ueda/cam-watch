@@ -3,10 +3,10 @@ import cv2
 
 # %%
 class UCapture:
-    def __init__(self, video_path = None):
+    def __init__(self, video_path=None, camera_id=0):
         self.cap = None
         if video_path is None:
-            self.cap = cv2.VideoCapture(0)
+            self.cap = cv2.VideoCapture(camera_id)
     def get_frame_width_height(self):
         w = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
         h = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
