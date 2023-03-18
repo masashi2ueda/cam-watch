@@ -5,6 +5,7 @@ import datetime
 class Utime:
     def __init__(self):
         self.st = None
+        self.start()
     def start(self):
         self.st = time.time()
     def get_now_sec(self):
